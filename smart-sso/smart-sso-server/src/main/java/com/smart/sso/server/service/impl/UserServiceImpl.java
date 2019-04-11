@@ -61,7 +61,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User, Integer> impleme
 	public void enable(Boolean isEnable, List<Integer> idList) {
 		verifyRows(dao.enable(isEnable, idList), idList.size(), "用户数据库更新失败");
 	}
-	
+
+	@Override
 	public void save(User t) {
 		super.save(t);
 	}
@@ -78,7 +79,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User, Integer> impleme
 	public User findByAccount(String account) {
 		return dao.findByAccount(account);
 	}
-	
+
+	@Override
 	@Transactional
 	public void deleteById(List<Integer> idList) {
 		userRoleService.deleteByUserIds(idList);

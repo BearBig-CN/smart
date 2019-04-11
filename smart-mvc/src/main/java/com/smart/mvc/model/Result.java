@@ -1,10 +1,13 @@
 package com.smart.mvc.model;
 
+import lombok.Setter;
+
 /**
  * 返回结果
  * 
  * @author Joe
  */
+@Setter
 public class Result {
 
 	/**
@@ -42,26 +45,14 @@ public class Result {
 		return createSuccessResult().setData(data).setMessage(message);
 	}
 
-	public Object getData() {
-		return data;
-	}
-
 	public Result setData(Object data) {
 		this.data = data;
 		return this;
 	}
 
-	public Integer getCode() {
-		return code;
-	}
-
 	public Result setCode(Integer code) {
 		this.code = code;
 		return this;
-	}
-
-	public String getMessage() {
-		return message;
 	}
 
 	public Result setMessage(String message) {

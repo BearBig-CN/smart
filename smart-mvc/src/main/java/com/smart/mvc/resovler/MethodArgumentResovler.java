@@ -3,6 +3,7 @@ package com.smart.mvc.resovler;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
@@ -24,9 +25,8 @@ import io.swagger.annotations.ApiParam;
  * 
  * @author Joe
  */
+@Slf4j
 public class MethodArgumentResovler implements HandlerMethodArgumentResolver {
-
-	private final Logger logger = LoggerFactory.getLogger(getClass());
 
 	/**
 	 * 参数结构缓存
@@ -112,7 +112,7 @@ public class MethodArgumentResovler implements HandlerMethodArgumentResolver {
 				}
 			}
 			else {
-				logger.error("验证器[" + validators[i] + "],在Validator.java文件中没有定义，请检查！");
+				log.error("验证器[" + validators[i] + "],在Validator.java文件中没有定义，请检查！");
 			}
 		}
 	}

@@ -41,7 +41,8 @@ public class AppServiceImpl extends ServiceImpl<AppDao, App, Integer> implements
 	public void enable(Boolean isEnable, List<Integer> idList) {
 		verifyRows(dao.enable(isEnable, idList), idList.size(), "应用数据库更新失败");
 	}
-	
+
+	@Override
 	public void save(App t) {
 		super.save(t);
 	}
@@ -59,6 +60,7 @@ public class AppServiceImpl extends ServiceImpl<AppDao, App, Integer> implements
 		return dao.findByCode(code);
 	}
 	
+	@Override
 	@Transactional
 	public void deleteById(List<Integer> idList) {
 		rolePermissionService.deleteByAppIds(idList);

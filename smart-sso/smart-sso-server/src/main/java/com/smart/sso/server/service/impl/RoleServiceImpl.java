@@ -33,6 +33,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, Role, Integer> impleme
 		verifyRows(dao.enable(isEnable, idList), idList.size(), "角色数据库更新失败");
 	}
 
+	@Override
 	public void save(Role t) {
 		super.save(t);
 	}
@@ -46,6 +47,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, Role, Integer> impleme
 		return dao.findPaginationByName(null, isEnable, null);
 	}
 
+	@Override
 	@Transactional
 	public void deleteById(List<Integer> idList) {
 		userRoleService.deleteByRoleIds(idList);

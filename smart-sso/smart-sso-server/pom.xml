@@ -16,19 +16,12 @@
 	</properties>
 	
 	<dependencies>
-		<!-- J2EE支持 -->
+
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
-		<!-- Jstl支持-->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		
+
 		<!-- 基础项目支持 -->
 		<dependency>
 			<groupId>com.smart</groupId>

@@ -36,6 +36,7 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionDao, Permission
 		this.dao = dao;
 	}
 
+	@Override
 	public void save(Permission t) {
 		super.save(t);
 		// JMS通知权限变更

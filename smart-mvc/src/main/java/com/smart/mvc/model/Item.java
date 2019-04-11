@@ -1,36 +1,29 @@
 package com.smart.mvc.model;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 键值对存储模型
- * 
+ *
  * @author Joe
  */
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Item implements Itemable {
-	
-	private String label;
-	private Object value;
 
-	public Item() {
-	}
+    private String label;
+    private Object value;
 
-	public Item(String label, Object value) {
-		this.label = label;
-		this.value = value;
-	}
+    @Override
+    public String getLabel() {
+        return label;
+    }
 
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
-	public Object getValue() {
-		return value;
-	}
-
-	public void setValue(Object value) {
-		this.value = value;
-	}
+    @Override
+    public Object getValue() {
+        return value;
+    }
 }
