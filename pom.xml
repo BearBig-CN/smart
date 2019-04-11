@@ -21,7 +21,7 @@
 			<properties>
 				<env>dev</env>
 				<log.level>debug</log.level>
-				<log.url>${catalina.home}/logs</log.url>
+				<log.url>/opt/logs/smart/</log.url>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -33,7 +33,7 @@
 			<properties>
 				<env>pro</env>
 				<log.level>info</log.level>
-				<log.url>${catalina.home}/logs</log.url>
+				<log.url>/opt/logs/smart/</log.url>
 			</properties>
 		</profile>
 	</profiles>
@@ -53,7 +53,7 @@
 		<mybatis.version>3.3.0</mybatis.version>
 		<mybatis-spring.version>1.2.3</mybatis-spring.version>
 		<druid.version>1.0.15</druid.version>
-		<mysql.version>5.1.36</mysql.version>
+		<mysql.version>8.0.11</mysql.version>
 		<fastjson.version>1.2.29</fastjson.version>
 		<xstream.version>1.4.8</xstream.version>
 		<dom4j.version>1.6.1</dom4j.version>
